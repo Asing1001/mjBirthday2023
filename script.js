@@ -1,8 +1,8 @@
-$(function() {
+$(function () {
 
-   $(".input input").focus(function() {
+   $(".input input").focus(function () {
 
-      $(this).parent(".input").each(function() {
+      $(this).parent(".input").each(function () {
          $("label", this).css({
             "line-height": "18px",
             "font-size": "18px",
@@ -13,12 +13,12 @@ $(function() {
             "width": "100%"
          })
       });
-   }).blur(function() {
+   }).blur(function () {
       $(".spin").css({
          "width": "0px"
       })
       if ($(this).val() == "") {
-         $(this).parent(".input").each(function() {
+         $(this).parent(".input").each(function () {
             $("label", this).css({
                "line-height": "60px",
                "font-size": "24px",
@@ -30,7 +30,7 @@ $(function() {
       }
    });
 
-   $(".button").click(function(e) {
+   $(".button").click(function (e) {
       var pX = e.pageX,
          pY = e.pageY,
          oX = parseInt($(this).offset().left),
@@ -47,7 +47,7 @@ $(function() {
       $("button", this).addClass('active');
    })
 
-   $(".alt-2").click(function() {
+   $(".alt-2").click(function () {
       if (!$(this).hasClass('material-button')) {
          $(".shape").css({
             "width": "100%",
@@ -55,7 +55,7 @@ $(function() {
             "transform": "rotate(0deg)"
          })
 
-         setTimeout(function() {
+         setTimeout(function () {
             $(".overbox").css({
                "overflow": "initial"
             })
@@ -64,7 +64,7 @@ $(function() {
          $(this).animate({
             "width": "140px",
             "height": "140px"
-         }, 500, function() {
+         }, 500, function () {
             $(".box").removeClass("back");
 
             $(this).removeClass('active')
@@ -79,10 +79,10 @@ $(function() {
 
    })
 
-   $(".material-button").click(function() {
+   $(".material-button").click(function () {
 
       if ($(this).hasClass('material-button')) {
-         setTimeout(function() {
+         setTimeout(function () {
             $(".overbox").css({
                "overflow": "hidden"
             })
@@ -93,7 +93,7 @@ $(function() {
             "height": "700px"
          });
 
-         setTimeout(function() {
+         setTimeout(function () {
             $(".shape").css({
                "width": "50%",
                "height": "50%",

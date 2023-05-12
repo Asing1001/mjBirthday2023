@@ -12,26 +12,43 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&amp;subset=latin,latin-ext"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="./icon.png" />
   </head>
   <body>
     <!-- partial:index.partial.html -->
     <div class="materialContainer">
-      <div class="box">
-        <div class="title">REDEEM</div>
+      <div class="box" id="redeemBlock">
+        <div class="title">Birthday</div>
 
         <div class="input">
-          <label for="name"></label>
-          <input type="text" name="name" id="name" />
+          <label for="passcode"></label>
+          <input type="text" name="passcode" id="passcode" />
           <span class="spin"></span>
         </div>
 
         <div class="button login">
-          <button><span>GO</span> <i class="fa fa-check"></i></button>
+          <button onclick="redeem()">
+            <span>GO</span> <i class="fa fa-check"></i>
+          </button>
         </div>
+      </div>
+      <div class="box" id="giftBlock" style="display: none">
+        <div class="title" style="float: none">Gift</div>
+        <a
+          class="gift-link"
+          href="https://www.paddingleft.com/mjBirthday2023/strip.pkpass"
+          >SM & MJ Heritage</a
+        >
+        <a
+          class="gift-link"
+          href="https://www.paddingleft.com/mjBirthday2023/blurbackground.pkpass"
+          >SM & MJ 2023 Fall</a
+        >
       </div>
     </div>
     <!-- partial -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./redeem.js"></script>
   </body>
 </html>

@@ -1,3 +1,9 @@
+.gift-link {
+  display: block;
+  color: #FD2553;
+  margin: 1rem 0;
+}
+
 .box {
   position: relative;
   top: 0;
